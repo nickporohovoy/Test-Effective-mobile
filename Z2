@@ -1,0 +1,37 @@
+---1. Пример REST API запроса:---
+
+GET /api/v1/partners?user_location=moscow HTTP/1.1
+Host: api.petrushka-zelenaya.com
+Authorization: Bearer <user_token>
+Accept: application/json
+
+---2. Пример ответа на запрос выше:---
+
+{
+  "partners": [
+    {
+      "name": "METRO",
+      "description": "Быстрая доставка сегодня 21:00-23:00",
+      "logo_url": "https://cdn.petrushka-zelenaya.com/partners/metro_logo.png",
+      "external_link": "https://metro.ru/delivery"
+    },
+    {
+      "name": "Ашан",
+      "description": "Быстрая доставка сегодня 18:00-20:00",
+      "logo_url": "https://cdn.petrushka-zelenaya.com/partners/ashan_logo.png",
+      "external_link": "https://auchan.ru/delivery"
+    },
+    {
+      "name": "ВкусВилл",
+      "description": "Быстрая доставка от 20 до 60 минут",
+      "logo_url": "https://cdn.petrushka-zelenaya.com/partners/vkusvill_logo.png",
+      "external_link": "https://vkusvill.ru/delivery"
+    },
+    {
+      "name": "ВИКТОРИЯ",
+      "description": "Быстрая доставка сегодня 17:00-19:00",
+      "logo_url": "https://cdn.petrushka-zelenaya.com/partners/viktoriya_logo.png",
+      "external_link": "https://viktoriya.ru/delivery"
+    }
+  ]
+}
