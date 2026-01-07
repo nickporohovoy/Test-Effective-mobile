@@ -1,1 +1,15 @@
-0
+[Мобильное Приложение] 
+   | (Регистрация device token)
+   v
+[Auth/User Service] --> [Database (Device Tokens)]
+   |
+   | (Бизнес-события: cart_abandoned, order_canceled, marketing_promo)
+   v
+[Business Microservices (Cart, Order, Marketing)] --> [Message Queue (Kafka/RabbitMQ)]
+                                                              |
+                                                              v
+[Notification Service] 
+   | (Формирование push: текст, данные)
+   | (Логи в DB)
+   v
+[Push Providers (FCM/APNs)] --> [Мобильное Приложение] (Доставка push)
